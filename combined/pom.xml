@@ -21,6 +21,7 @@
         <httpsPort>8443</httpsPort>
         <httpPort>8080</httpPort>
     </properties>
+    
     <build>
         <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
         <finalName>devopsnapratica</finalName>
@@ -90,10 +91,10 @@
                     </connectors>
                 </configuration>
             </plugin>
-            <plugin>
+			<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>keytool-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>1.5</version>
                 <executions>
                     <execution>
                         <phase>generate-resources</phase>
@@ -104,9 +105,9 @@
                     </execution>
                     <execution>
                         <phase>generate-resources</phase>
-                        <id>genkey</id>
+                        <id>generateKeyPair</id>
                         <goals>
-                            <goal>genkey</goal>
+                            <goal>generateKeyPair</goal>
                         </goals>
                     </execution>
                 </executions>
